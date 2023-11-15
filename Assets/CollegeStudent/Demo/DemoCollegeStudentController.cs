@@ -77,7 +77,20 @@ namespace ClearSky
                 //        anim.SetBool("isRun", true);
 
                 //}
+
                 if (Input.GetAxisRaw("Horizontal") > 0)
+                {
+                    direction = 1;
+                    moveVelocity = Vector3.right * 2;
+
+                    transform.localScale = new Vector3(direction, 1, 1);
+                    if (!anim.GetBool("isJump"))
+                        anim.SetBool("isRun", true);
+
+                }
+
+                //if (Input.GetAxisRaw("Horizontal") > 0)
+                else
                 {
                     direction = 1;
                     moveVelocity = Vector3.right;
