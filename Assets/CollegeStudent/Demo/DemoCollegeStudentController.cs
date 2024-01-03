@@ -22,8 +22,8 @@ namespace ClearSky
         {
             if (collision.gameObject.CompareTag("Obstacle"))
             {
-                GameManager.Instance.ShowGameOverScreen();
                 Die();
+                GameManager.Instance.ShowGameOverScreen();
                 Time.timeScale = 0f;
             }
         }
