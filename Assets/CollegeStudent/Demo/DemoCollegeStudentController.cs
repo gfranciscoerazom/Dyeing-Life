@@ -6,8 +6,8 @@ namespace ClearSky
 {
     public class DemoCollegeStudentController : MonoBehaviour
     {
-        public float movePower = 10f;
-        public float KickBoardMovePower = 15f;
+        public float movePower = 5f;
+        public float KickBoardMovePower = 10f;
         public float jumpPower = 20f; //Set Gravity Scale in Rigidbody2D Component to 5
 
         private Rigidbody2D rb;
@@ -115,7 +115,7 @@ namespace ClearSky
             }
             if (isKickboard)
             {
-                Vector3 moveVelocity = Vector3.zero;
+                Vector3 moveVelocity = Vector3.right;
                 //if (Input.GetAxisRaw("Horizontal") < 0)
                 //{
                 //    direction = -1;
