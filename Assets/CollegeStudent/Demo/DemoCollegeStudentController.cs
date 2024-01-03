@@ -18,6 +18,16 @@ namespace ClearSky
         private bool alive = true;
         private bool isKickboard = false;
 
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                GameManager.Instance.ShowGameOverScreen();
+                Die();
+                Time.timeScale = 0f;
+            }
+        }
+
 
         // Start is called before the first frame update
         void Start()
@@ -32,7 +42,7 @@ namespace ClearSky
             if (alive)
             {
                 // Hurt();
-                // Die();
+                
                 Attack();
                 Jump();
                 KickBoard();
